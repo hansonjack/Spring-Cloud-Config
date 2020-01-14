@@ -3,11 +3,11 @@ spring:
   application:
     name: eureka-server
   zipkin:
-    base-url: http://${eureka.instance.ip-address}:9411
+    base-url: http://192.168.50.80:9411
   boot:
     admin:
       client:
-        url: http://${eureka.instance.ip-address}:8889
+        url: http://192.168.50.80:8889
 server:
   port: 8080
 eureka:
@@ -20,7 +20,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: false
     service-url:
-      defaultZone: http://192.168.50.49:8081/eureka/
+      defaultZone: http://192.168.50.79:8080/eureka/
 management:
   endpoint:
     health:
@@ -36,13 +36,13 @@ spring:
   application:
     name: eureka-server
   zipkin:
-    base-url: http://${eureka.instance.ip-address}:9411
+    base-url: http://192.168.50.80:9411
   boot:
     admin:
       client:
-        url: http://${eureka.instance.ip-address}:8889
+        url: http://192.168.50.80:8889
 server:
-  port: 8081
+  port: 8080
 eureka:
   server:
     enable-self-preservation: false  # 开发环境关掉保护机制,快速发现已经挂掉的服务，生产环境需要设置为true提升服务稳定性
@@ -53,7 +53,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: false
     service-url:
-      defaultZone: http://192.168.50.49:8080/eureka/
+      defaultZone: http://192.168.50.80:8080/eureka/
 management:
   endpoint:
     health:

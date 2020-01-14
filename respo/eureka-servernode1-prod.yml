@@ -2,17 +2,17 @@ spring:
   application:
     name: eureka-server
   zipkin:
-    base-url: http://${eureka.instance.ip-address}:9411
+    base-url: http://192.168.50.80:9411
   boot:
     admin:
       client:
-        url: http://${eureka.instance.ip-address}:8889
+        url: http://192.168.50.80:8889
   # 消息总线相关配置
   rabbitmq:
-    host: 192.168.50.49
+    host: 192.168.50.74
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: 123456
   cloud:
     bus:
       enabled: true
@@ -24,14 +24,14 @@ eureka:
   server:
     enable-self-preservation: false  # 开发环境关掉保护机制,快速发现已经挂掉的服务，生产环境需要设置为true提升服务稳定性
   instance:
-    hostname: 192.168.50.49
-    ip-address: 192.168.50.49
+    hostname: 50-79-node4
+    ip-address: 192.168.50.79
     prefer-ip-address: true
   client:
     register-with-eureka: true #表示是否将自己注册在EurekaServer上，默认为true。由于当前应用就是EurekaServer，所以置为false
     fetch-registry: true #表示是否从EurekaServer获取注册信息，默认为true。单节点不需要同步其他的EurekaServer节点的数据
     serviceUrl:
-      defaultZone: http://192.168.50.49:8081/eureka/
+      defaultZone: http://192.168.50.79:8080/eureka/
 management:
   endpoint:
     health:
