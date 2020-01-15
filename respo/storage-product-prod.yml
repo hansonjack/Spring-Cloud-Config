@@ -42,11 +42,11 @@ spring:
       connection-timeout: 30000
       connection-test-query: select 1
   redis:
-    url: redis://192.168.50.80:6379
+    url: redis://192.168.50.74:6379
     database: 1
 eureka:
   instance:
-    ip-address: 192.168.50.80
+    ip-address: 192.168.50.79
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
   client:
