@@ -101,6 +101,8 @@ ribbon:
   ReadTimeOut: 5000
   # 请求连接的超时时间
   ConnectTimeout: 2000
+  eureka:
+    enabled: true
   
 histrix:
   command:
