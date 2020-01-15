@@ -72,7 +72,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 swagger:
   auth:
-    server: http://192.168.50.79:7006/zegooauth/oauth/token
+    server: http://192.168.50.80:8886/zegooauth/oauth/token
 logging:
   level:
     io.swagger.models.parameters.AbstractSerializableParameter: error
@@ -80,5 +80,5 @@ security:
   oauth2:
     resource:
       id: warehouseService
-      user-info-uri: http://192.168.50.79:7006/zegooauth/api/member
+      user-info-uri: http://192.168.50.80:8886/zegooauth/api/member
       prefer-token-info: false
