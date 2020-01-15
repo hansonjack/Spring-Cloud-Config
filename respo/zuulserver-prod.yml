@@ -91,3 +91,5 @@ hystrix:
 ribbon:
   ReadTimeout: 90000
   ConnectTimeout: 90000
+  eureka:
+    enabled: true
