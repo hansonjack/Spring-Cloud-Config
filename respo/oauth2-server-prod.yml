@@ -50,11 +50,11 @@ spring:
     cache: false
     prefix: classpath:/templates/
   redis:
-    url: redis://192.168.50.80:6379
+    url: redis://192.168.50.74:6379
     database: 0
 eureka:
   instance:
-    ip-address: 192.168.50.79
+    ip-address: 192.168.50.80
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
   client:
@@ -87,13 +87,13 @@ logging:
 # 配置网关
 swagger:
   auth:
-    server: http://192.168.50.77:8886/zegooauth/oauth/token
+    server: http://192.168.50.80:8886/zegooauth/oauth/token
 # 配置网关
 security:
   oauth2:
     resource:
       id: oauth2-server
-      user-info-uri: http://192.168.50.77:8886/zegooauth/api/member
+      user-info-uri: http://192.168.50.80:8886/zegooauth/api/member
       prefer-token-info: false
 
 ribbon:
